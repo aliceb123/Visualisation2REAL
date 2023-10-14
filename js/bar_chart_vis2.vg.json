@@ -3,7 +3,7 @@
     "width": 550,
     "height": 400,
     "data": {
-      "url": "data/newDATA.csv"
+      "url": "https://raw.githubusercontent.com/aliceb123/Visualisation2REAL/main/data/newDATA.csv"
     },
     "params": [
       {"name": "state_selection","bind": 
