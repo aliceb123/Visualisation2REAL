@@ -3,7 +3,7 @@
     "height": 350,
     "width": 475,
     "data": {
-        "url": "data/rainAUS.csv"
+        "url": "https://raw.githubusercontent.com/aliceb123/Visualisation2REAL/main/data/rainAUS.csv"
     },
     "title": "Daily Max Temperatures (C) in Melbourne",
     "config": {
