@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 450,
+  "height": 400,
+  "title": "Rainfall in Victorian rain centres",
+  "description": "A simple radial chart with embedded data.",
+  "data": {
+    "values": [
+      {"category": "Ballarat", "value": 527},
+      {"category": "Bendigo", "value": 491},
+      {"category": "Sale", "value": 453},
+      {"category": "Melbourne Airport", "value": 436},
+      {"category": "Melbourne", "value": 455},
+      {"category": "Mildura", "value": 284},
+      {"category": "Nhill", "value": 147},
+      {"category": "Portland", "value": 758},
+      {"category": "Watsonia", "value": 558},
+      {"category": "Dartmoor", "value": 632},
+      {"category": "Williamstown", "value": 916},
+      {"category": "Richmond", "value": 631}]
+  },
+
+  "layer": [{
+    "mark": {"type": "arc", 
+    "innerRadius": 20, 
+    "stroke": "#fff", 
+    "color": {"scale": {"scheme":"#000000"}}}
+  },
+  {
+    "mark": {"type": "text", "radiusOffset": 20,
+    "color": {
+      "field": "category", 
+    "type": "nominal", 
+    "scale": {"scheme":"#000000"}}},
+    "encoding": {
+      "text": {
+        "field": "category", 
+        "type": "nominal", 
+      "color": {
+        "field": "category", 
+      "type": "nominal", 
+      "scale": {"scheme":"#000000"}}
+    }
+    }
+  }],
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative", "stack": true},
+    "radius": {"field": "value", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
+    "color": {
+      "field": "value", 
+      "type": "nominal", 
+      "scale": {"range": ["#fc030f","#fc0398","#ba03fc","#4103fc","#0377fc","#03f4fc","#03fc35","#9dfc03","#fcf403","#fc9803","#a60303","#70233d"]},
+      "legend": null
+      },
+    "tooltip": [{"field": "value", "title": "Rainfall (mm)"}]
+  }
+}

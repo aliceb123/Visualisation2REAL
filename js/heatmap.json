@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height": 350,
+    "width": 475,
+    "data": {
+        "url": "data/rainAUS.csv"
+    },
+    "title": "Daily Max Temperatures (C) in Melbourne",
+    "config": {
+        "view": {
+            "strokeWidth": 0,
+            "step": 1
+        },
+        "axis": {
+            "domain": false
+        }
+    },
+    "mark": "rect",
+    "encoding": {
+        "x": {
+            "field": "Date",
+            "timeUnit": "date",
+            "type": "ordinal",
+            "title": "Day",
+            "axis": {
+                "labelAngle": 0,
+                "format": "%e"
+            }
+        },
+        "y": {
+            "field": "Date",
+            "timeUnit": "month",
+            "type": "ordinal",
+            "title": "Month"
+        },
+        "color": {
+            "field": "MaxTemp",
+            "aggregate": "max",
+            "type": "quantitative",
+            "scale": {"scheme": "oranges"},
+            "legend": {
+                "title": "Maximum Temperature"
+            }
+        },
+        "tooltip": [{
+            "field": "MaxTemp", "title": "Maximum Temperature (C)"
+        }]
+    }
+  }

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Visualisation 2 | Average Rainfall Australia </title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  <!-- Import pure.css - From wk9 multiple dashboards section-->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+  integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+  <style> 
+  h1 {
+    background-image: url(images/rainfall2.jpg);
+    background-size: cover;
+    height: 100px
+  }
+  p1 {
+    background-image: url(images/rainMelb.jpg);
+    background-size: cover;
+    height: 100px
+  }
+  </style>
+
+  
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+      <h1>| Rainfall across Australia |</h1>
+        
+        <p>The vastness of the <p2>Australian continent</p2> means that many different locations around the country experience different rainfall levels. </p>
+        <p>This page highlights how rainfall varies over the country and which regions of <p2>Australia</p2> experience the most inclement weather.  </p>
+      
+        </p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <div class="page">
+      <!-- pure grid group -->
+      <div1 class="pure-g">
+        <div class="pure-u-1-2">
+          <div class="description description-left">
+            <h2>Australian Rainfall</h2>
+            <p>
+              Rainfall in <p2>Australia</p2> varies greatly across the country. Northern Queensland often experiences the highest rainfall in the country. 
+              As can be seen on the graph to the right, this is shown that the highest rainfall in the country is held there. 
+              There is also a trend of having higher rainfall in the Eastern states which can be seen clearly. 
+            The West coast also experiences rainfall, but far less than 1000mm per year, which in comparison to the East coast is quite small.  </p>
+          </div>
+        </div>
+        <div class="pure-u-1-2">
+          <div id="symbol_map1"></div>
+        </div>
+      </div1>
+      <script type="text/javascript">
+    
+        var spec2 = "js/symbol_map_with_graticules.vg.json";
+        vegaEmbed('#symbol_map1', spec2).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+      </script>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div2 class="pure-g">
+      <div class="pure-u-1-2">
+        <div id="scatter_plot"></div>
+      </div>
+    
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <h2>Rainfall varies with Temperatures</h2>
+          <p>
+          It's often been speculated that rainfall varies with temperature. In the graph to the left it is clear that in areas (such as the Northern Territory and Queensland), 
+          that they experience high rainfall and that they have high maximum and minimum temperatures. Similarly, areas which experience moderate rainfall (such as Victoria & Tasmania), 
+        have moderate minimum and maximum temperatures. </p>
+
+        <p> The graph to the right is interactive. The states in the legend can be selected to filter the graph, and there is a selector bar below the graph. </p>
+
+        <p> The below graphs highlight different weather patterns in Australia from which conclusions can be drawn. Interestingly, the Northern Territory and Northern Queensland where the most rain is experienced, there is also the highest wind gusts.
+          The graph to the right shows a count of the days when there was rain and when there wasn't rain. This graph can also be filtered by states to highlight clearly the spread across the states. 
+        </p>
+        </div>
+      </div>
+    </div2>
+<script type="text/javascript">
+
+  var spec2 = "js/bubblechart_try.vg.json";
+  vegaEmbed('#scatter_plot', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+<!-- end pure grid group -->
+
+
+<!-- pure grid group -->
+<div3 class="pure-g">
+  <div class="pure-u-1-2">
+    <div class="pure-u-1-2">
+      <div id="symbol_map"></div>
+    </div>
+  </div>
+  <div class="pure-u-1-2">
+    <div id="bar_chart" ></div>
+  </div>
+</div3>
+<script type="text/javascript">
+
+  var spec2 = "js/windmap_waus.vg.json";
+  vegaEmbed('#symbol_map', spec2).then(function(result) {
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  </script>
+<script type="text/javascript">
+
+var spec2 = "js/bar_chart_vis2.vg.json";
+vegaEmbed('#bar_chart', spec2).then(function(result) {
+// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+</script>
+<!-- end pure grid group -->
+
+
+
+<!-- pure grid group -->
+<div4 class="pure-g">
+  <div class="pure-u-1-2">
+    <div class="description description-left">
+      <h2 align = "center"> Melbourne's Weather</h2>
+      <p align = "center">
+        
+        <p3>Melbourne</p3> is known for having some of the most temperature weather in the world. 
+        While being in <p2>Australia</p2>, means that <p3>Melbourne</p3> experiences the heat in the summer, being a coastal city means there is also a lot of wind. 
+        <p3>Melbourne</p3> is known for experiencing 4 seasons in a day which is often seen in the height of Spring, with the day starting with sun and ending with rain! </p>
+
+    <p align = "center"> 
+        The below graphs are specific to <p3>Melbourne</p3>. The first graph shows how the temperature changes over <p3>Melbourne</p3> over the course of a year (2014). 
+        The second graph shows the amount of rainfall that each Victorian location had in 2014.
+      </p>
+
+    </div>
+  </div>
+  <div class="pure-u-1-2">
+    <p1 align = "center">
+      <img src="images/rainMelb.jpg"
+        </p1>
+  </div>
+</div4>
+
+<!-- end pure grid group -->
+
+<!-- pure grid group -->
+<div4 class="pure-g">
+    <div class="pure-u-1-2">
+      <div id="heatmap"></div>
+    </div>
+  <div class="pure-u-1-2">
+    <div id="radial_chart"></div>
+  </div>
+</div4>
+
+<script>
+  var spec2 = "js/heatmap.json";
+  vegaEmbed('#heatmap', spec2).then(function(result) {
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  </script>
+
+<script type="text/javascript">
+  var spec2 = "js/radial.vg.json";
+  vegaEmbed('#radial_chart', spec2).then(function(result) {
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  </script>
+<!-- end pure grid group -->
+
+<!-- pure grid group -->
+<div5 class="pure-g">
+  <div class="pure-u-1-1">
+    <p align = "center">
+      In <p3>Melbourne</p3> in 2014, the maximum temperature experienced was <div10> 43.7 degrees </div10> on the 20th of January. 
+      From the radial chart to the right, it is clear that <div11>Williamstown</div11> and <div12>Portland</div12> experience the most rainfall. 
+      Interestingly, these are both locations which are right by the water. Similarly, the two locations with the lowest rainfall (<div13>Nhill</div13> & <div14>Mildura</div14>) are both locations inland. 
+      </p>
+  </div>
+</div5>
+
+<!-- end pure grid group -->
+
+ <!-- pure grid group -->
+ <div class="pure-g">
+  <div6 class="pure-u-1-1">
+    <p>Reference: Kaggle - <a href="https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package">LINK</a>
+    </p>
+  </div6>
+</div>
+<!-- end pure grid group -->
+
+</body>
+</html>

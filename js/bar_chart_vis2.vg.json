@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 550,
+    "height": 400,
+    "data": {
+      "url": "data/newDATA.csv"
+    },
+    "params": [
+      {"name": "state_selection","bind": 
+    {"input": "select",
+    "options": [null,
+    "New South Wales","Victoria","Australian Capital Territory","South Australia","Western Australia","Tasmania",
+    "Northern Territory"],
+    "labels":[
+    "Show All","New South Wales","Victoria","Australian Capital Territory","South Australia","Western Australia",
+    "Tasmania","Northern Territory"],
+    "name": "State Selection: "
+    }
+    }
+  ],
+"transform":[
+   {"filter": "state_selection == null || datum.state ==state_selection"}
+    ],
+    "repeat": {"layer": ["Rain", "No_Rain"]},
+    "spec": {
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "Location",
+          "type": "nominal"
+        },
+        "y": {
+          "aggregate": "sum",
+          "field": {"repeat": "layer"},
+          "type": "quantitative",
+          "title": null
+        },
+        "color": {"datum": {"repeat": "layer"}, "title": "Different"},
+        "xOffset": {"datum": {"repeat": "layer"}},
+        "tooltip": [
+          {"field": "Location", "type": "nominal", "title": "Location"},
+          {"field": "Rain", "type": "quantitative", "title": "Days with Rain", "format": ","},
+          {"field": "No_Rain", "type": "quantitative", "title": "Days without Rain", "format": ","}
+          
+        ]
+        
+      }
+    },
+    "config": {
+      "mark": {"invalid": null}
+    }
+  }

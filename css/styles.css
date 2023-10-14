@@ -1,0 +1,124 @@
+html, body {background-color: #DBF9FC;}
+
+h1  {
+    color: white; 
+    font: bold;
+    text-align: center; 
+    border: 1px solid white;
+    height: 100 px;
+    font-size: 70px;
+}
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    font-size: 35px;
+    font-family: "Optima", sans-serif;
+    font: bold;
+}
+
+p2{
+    font-size: 18px;
+    font-style: italic;
+    font: bolder;
+    color: #3008c2;
+    
+}
+
+p3{
+    font-size: 18px;
+    font-style: italic;
+    font: bolder;
+    color: #513e94;
+    
+}
+
+p    {
+    color: black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 10px;
+    box-align: center;
+    text-align: center;
+}
+
+p1    {
+    color: black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 10px;
+    box-align: center;
+    text-align: center;
+}
+
+div1 {
+    background-color: #dff5f7;
+    width: 1300px;
+   border: 7px solid white;
+   padding: 50px;
+   margin: 20px;
+   text-align: center;
+}
+div2 {
+    background-color: #dff5f7;
+    width: 1300px;
+    border: 7px solid white;
+    padding: 50px;
+    margin: 20px;
+    text-align: center;
+}
+div3 {background-color: #dff5f7;
+    width: 1300px;
+    border: 7px solid white;
+    padding: 50px;
+    margin: 20px;
+}
+div4 {background-color: #dff5f7;
+    width: 1300px;
+    border: 7px solid white;
+    padding: 50px;
+    margin: 20px;
+    text-align: center;
+}
+div5 {background-color: #dff5f7;
+    width: 1300px;
+    border: 7px solid white;
+    padding: 50px;
+    margin: 20px;
+    
+}
+div9 {background-color: #dff5f7;
+    width: 1300px;
+    border: 7px solid white;
+    padding: 50px;
+    margin: 20px;
+    
+}
+div10 {
+    color: red;
+    font: bold; 
+}
+div11 {
+    color: #70233d;
+    font: bold; 
+}
+div12 {
+    color: #03fc35;
+    font: bold; 
+}
+div13 {
+    color: #03f4fc;
+    font: bold; 
+}
+div14 {
+    color: #0377fc;
+    font: bold; 
+}
+
+
