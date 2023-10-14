@@ -7,14 +7,14 @@
     "layer": [
     {
     "data": {
-    "url": "js/aus_map_wgraticules.topojson",
+    "url": "https://raw.githubusercontent.com/aliceb123/Visualisation2REAL/main/js/aus_map_wgraticules.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
     },
     "mark": {"type": "geoshape", "fill": "#F2EBEA", "stroke": "white"}
     },
     {
       "data": {
-            "url": "data/newDATA.csv",
+            "url": "https://raw.githubusercontent.com/aliceb123/Visualisation2REAL/main/data/newDATA.csv",
             "format": {"type": "csv", "parse": {"longitude": "number", "latitude": "number"}}
           },
           "mark": {"type": "point", "shape": "wedge", "filled": true},
